@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>- Grading System -</title>
+    </head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <body>
+        <h1>
+            -*- S t u d e n t &ensp; G r a d i n g &ensp; S y s t e m -*-
+        </h1>
+        <blockquote>
+            Relvyn Joshua U. Cagadas - IT2R5
+        </blockquote>
+    </body>
+
+    <div class="box">
+        <form id="gradesform">
+            <div class="subs">
+                <label for="sub1">Subject 1:</label>
+                <input type="number" id="sub1" name="sub1"/>
+            </div>
+            <div class="subs">
+                <label for="sub2">Subject 2:</label>
+                <input type="number" id="sub2" name="sub2"/>
+            </div>
+            <div class="subs">
+                <label for="sub3">Subject 3:</label>
+                <input type="number" id="sub3" name="sub3"/>
+            </div>
+            <div class="subs">
+                <label for="sub4">Subject 4:</label>
+                <input type="number" id="sub4" name="sub4"/>
+            </div>
+            <div class="subs">
+                <label for="sub5">Subject 5:</label>
+                <input type="number" id="sub5" name="sub5"/>
+            </div>
+            <div class="subs">
+                <label for="sub6">Subject 6:</label>
+                <input type="number" id="sub6" name="sub6"/>
+            </div>
+            <div class="subs">
+                <label for="sub7">Subject 7:</label>
+                <input type="number" id="sub7" name="sub7"/>
+            </div>
+            <div class="button">
+                <button type="button" onclick="calculate()">Calculate Grades</button>
+            </div>
+            <div class="container">
+                <h3>
+                    -*- R e s u l t s -*-
+                </h3>
+                <p id="total"></p>
+                <p id="average"></p>
+                <p id="remarks"></p>
+                <p id="descriptor"></p>
+            </div>
+
+            <script>
+                function calculate(){
+                    let grade1 = document.getElementById('sub1').value;
+                    let grade2 = document.getElementById('sub2').value;
+                    let grade3 = document.getElementById('sub3').value;
+                    let grade4 = document.getElementById('sub4').value;
+                    let grade5 = document.getElementById('sub5').value;
+                    let grade6 = document.getElementById('sub6').value;
+                    let grade7 = document.getElementById('sub7').value;
+
+                    let total =  parseFloat(grade1) + parseFloat(grade2) + parseFloat(grade3) +
+                    parseFloat(grade4) + parseFloat(grade5) + parseFloat(grade6) + parseFloat(grade7);
+
+                    let average = parseFloat(total / 7);
+
+                    if (average > 100) {
+                        remarks = "Does not Exist";
+                        descriptor = "Does not Exist";
+                    }
+                    else if (average <= 100 && average >= 90) {
+                        remarks = "Congratulations you Passed!";
+                        descriptor = "Outstanding";
+                    }
+                    else if (average <= 89 && average >= 85) {
+                        remarks = "Congratulations you Passed!";
+                        descriptor = "Very Satisfactory";
+                    }
+                    else if (average <= 84 && average >= 80) {
+                        remarks = "Congratulations you Passed!";
+                        descriptor = "Satisfactory";
+                    }
+                    else if (average <= 79 && average >= 75) {
+                        remarks = "Congratulations you Passed!";
+                        descriptor = "Fairly Satisfactory";
+                    }
+                    else if (average <= 75) {
+                        remarks = "Failed";
+                        descriptor = "Did not meet expextations";
+                    }
+                    else {
+                        remarks = "Please enter your Grades";
+                        descriptor = "Hmm nothing";
+                    }
+
+                    document.getElementById("total").innerHTML = `Total grade is ${total}`;
+                    document.getElementById("average").innerHTML = `Average grade is ${average}`;
+                    document.getElementById("remarks").innerHTML = `Remarks: ${remarks}`;
+                    document.getElementById("descriptor").innerHTML = `Descriptor: ${descriptor}`;
+                }
+            </script>
+
+        </form>
+    </div>
+
+</html>

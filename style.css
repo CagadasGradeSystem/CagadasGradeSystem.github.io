@@ -1,0 +1,77 @@
+/*Color Scheme
+#BBD6B8
+#AEC2B6
+#94AF9F
+#DBE4C6
+
+#393E46
+*/
+
+/*Background*/
+
+body {
+    background-color: #94AF9F;
+    color: #393E46;
+}
+
+/*Fonts*/
+
+h1{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 35px; font-style: italic; font-variant: normal; font-weight: 700; 
+    line-height: 26.4px; text-align: center;}
+h3 { 
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 25px; font-style: italic; font-variant: normal; font-weight: 700; 
+    line-height: 15.4px; text-align: center;} 
+p { 
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; 
+    line-height: 20px; } 
+blockquote { 
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 20px; font-style: italic; font-variant: normal; font-weight: 400; 
+    line-height: 30px; text-align: center } 
+pre { 
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; 
+    line-height: 18.5714px; }
+label {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; 
+    line-height: 20px; }
+
+/*Container/Form*/
+
+.box {
+    background-color: #BBD6B8;
+    color: #393E46;
+    margin: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.box .container {
+    background-color: #DBE4C6;
+    color: #393E46;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.box .subs {
+    text-align: center;
+}
+
+.box .button {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.box .subs input {
+    margin: 10px 10px 10px;
+}
